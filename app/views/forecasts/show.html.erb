@@ -1,16 +1,21 @@
-<!-- app/views/weather_forecasts/show.html.erb -->
 <h1>Weather Forecast</h1>
+<%if @forecast_data['success'].nil? %>
+	<h2>Location: <%= @forecast_data['location']['name'] %>, <%= @forecast_data['location']['country'] %></h2>
 
-<h2>Location: <%= @forecast_data['location']['name'] %>, <%= @forecast_data['location']['country'] %></h2>
+	<div>
+	  <p>Temperature: <%= @forecast_data['current']['temperature'] %>°C</p>
+	  <p>Weather: <%= @forecast_data['current']['weather_descriptions'].join(', ') %></p>
+	  <p>Wind Speed: <%= @forecast_data['current']['wind_speed'] %> km/h</p>
+	  <p>Pressure: <%= @forecast_data['current']['pressure'] %> mb</p>
+	  <p>Humidity: <%= @forecast_data['current']['humidity'] %>%</p>
+	  <p>Cloud Cover: <%= @forecast_data['current']['cloudcover'] %>%</p>
+	  <p>UV Index: <%= @forecast_data['current']['uv_index'] %></p>
+	  <p>Visibility: <%= @forecast_data['current']['visibility'] %> km</p>
+	  <p>Local Time: <%= @forecast_data['location']['localtime'] %></p>
+	</div>
 
-<div>
-  <p>Temperature: <%= @forecast_data['current']['temperature'] %>°C</p>
-  <p>Weather: <%= @forecast_data['current']['weather_descriptions'].join(', ') %></p>
-  <p>Wind Speed: <%= @forecast_data['current']['wind_speed'] %> km/h</p>
-  <p>Pressure: <%= @forecast_data['current']['pressure'] %> mb</p>
-  <p>Humidity: <%= @forecast_data['current']['humidity'] %>%</p>
-  <p>Cloud Cover: <%= @forecast_data['current']['cloudcover'] %>%</p>
-  <p>UV Index: <%= @forecast_data['current']['uv_index'] %></p>
-  <p>Visibility: <%= @forecast_data['current']['visibility'] %> km</p>
-  <p>Local Time: <%= @forecast_data['location']['localtime'] %></p>
-</div>
+<%else%>
+	<div>
+		<p> Unable to forecast weather for a <%=params[:address]%>.</p>
+	</div>
+<%end%>
