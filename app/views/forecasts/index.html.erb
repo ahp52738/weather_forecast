@@ -1,0 +1,5 @@
+<h1>Weather Forecast</h1>
+<%= form_tag forecast_path, method: :get do %>
+  <%= text_field_tag :address, params[:address], placeholder: 'Enter address', required: true %>
+  <%= submit_tag 'Get Forecast' %>
+<% end %>
