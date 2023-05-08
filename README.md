@@ -24,7 +24,8 @@ Set up the database:
 ```
 
 
-## Configure the OpenWeatherMap API key:
+## Configure the WeatherStack API key:
+https://weatherstack.com/?utm_source=google&utm_medium=cpc&utm_campaign=weatherstack_search_us_ca&gclid=Cj0KCQjwu-KiBhCsARIsAPztUF0MDVaojKmZpoP2_lctGN1A3BM06DR7iL6QwQ2uyonF8Z_IVxfO4IUaArW0EALw_wcB
 
 Open the file .env (create it if it doesn't exist).
 
