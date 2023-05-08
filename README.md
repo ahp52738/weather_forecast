@@ -1,24 +1,45 @@
-# README
+## Project Name
+Weather Forecast
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+This Rails application retrieves weather forecast data based on user input and caches the data for subsequent requests. It uses the OpenWeatherMap API to fetch the forecast data.
 
-Things you may want to cover:
+Setup
+Clone the repository to your local machine:
 
-* Ruby version
+```git clone https://github.com/ahp52738/weather_forecast.git/```
 
-* System dependencies
+Change into the project directory:
 
-* Configuration
+cd weather_forecast
 
-* Database creation
+Install the required gems:
 
-* Database initialization
+bundle install
 
-* How to run the test suite
+Set up the database:
 
-* Services (job queues, cache servers, search engines, etc.)
+```rails db:create
+rails db:migrate```
 
-* Deployment instructions
 
-* ...
+## Configure the OpenWeatherMap API key:
+
+Open the file .env (create it if it doesn't exist).
+
+Add the following line, replacing <your-api-key> with your actual WeatherStack API key:
+
+WEATHER_STACK_API_KEY: <your-api-key>
+Start the Rails server:
+
+
+```rails server```
+
+
+## Running the Tests
+This project uses RSpec for testing. To run the test suite, execute the following command:
+
+
+```bundle exec rspec```
+
+This will run all the tests located in the spec directory and display the test results.
