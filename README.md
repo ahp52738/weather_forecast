@@ -31,15 +31,13 @@ Open the file .env (create it if it doesn't exist).
 Add the following line, replacing <your-api-key> with your actual WeatherStack API key:
 
 WEATHER_STACK_API_KEY: <your-api-key>
-Start the Rails server:
 
+## Start the Rails server:
 
 ```rails server```
 
-
 ## Running the Tests
 This project uses RSpec for testing. To run the test suite, execute the following command:
-
 
 ```bundle exec rspec```
 
