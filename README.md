@@ -20,7 +20,8 @@ bundle install
 Set up the database:
 
 ```rails db:create
-rails db:migrate```
+   rails db:migrate
+```
 
 
 ## Configure the OpenWeatherMap API key:
